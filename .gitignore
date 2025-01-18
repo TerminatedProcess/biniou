@@ -8,4 +8,6 @@
 /.ini
 /.logs
 /.community
+/workspace
 llama.log
+nohup.out

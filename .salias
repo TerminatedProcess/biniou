@@ -1,0 +1,8 @@
+
+#!/bin/bash
+alias dbc='clear;docker build -t biniou https://github.com/Woolverine94/biniou.git'
+alias dbg='clear;docker build -t biniou https://raw.githubusercontent.com/Woolverine94/biniou/main/CUDA/Dockerfile'
+
+alias drunc='clear;docker run -it --restart=always -p 7860:7860 -v biniou_outputs:/home/biniou/biniou/outputs -v biniou_models:/home/biniou/biniou/models -v biniou_cache:/home/biniou/.cache/huggingface -v biniou_gfpgan:/home/biniou/biniou/gfpgan biniou:latest'
+alias drung='clear;docker run -it --gpus all --restart=always -p 7860:7860 -v biniou_outputs:/home/biniou/biniou/outputs -v biniou_models:/home/biniou/biniou/models -v biniou_cache:/home/biniou/.cache/huggingface -v biniou_gfpgan:/home/biniou/biniou/gfpgan biniou:latest'
+alias breset='dstop biniou;dstart biniou;ds'
